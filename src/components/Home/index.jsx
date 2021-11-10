@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { members } from "../MembersArr";
 
-const Home = ({ members }) => {
+const Home = () => {
   return (
     <div>
       {members.map((member) => (
