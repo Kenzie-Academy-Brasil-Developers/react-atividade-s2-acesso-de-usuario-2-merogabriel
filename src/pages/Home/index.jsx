@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { members } from "../MembersArr";
+import { members } from "../../components/MembersArr";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       {members.map((member) => (
         <Link
           to={
@@ -12,7 +12,9 @@ const Home = () => {
               ? `/company/${member.id}`
               : `/customer/${member.id}`
           }
-        ></Link>
+        >
+          {member.name}
+        </Link>
       ))}
     </div>
   );
